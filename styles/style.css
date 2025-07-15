@@ -36,7 +36,6 @@ body {
 }
 
 .service__footer {
-  /* padding: 24px; */
   padding-left: 16px;
   background-color: #f8f8f8;
 }
@@ -174,8 +173,4 @@ body {
 
 #content.show {
   display: block;
-}
-
-.tmp .swiper-slide {
-  width: 240px;
 }
