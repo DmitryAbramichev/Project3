@@ -132,6 +132,10 @@ body {
     letter-spacing: -0.01em;
     color: #1b1c21;
   }
+  .service__button:hover {
+    cursor: pointer;
+    opacity: 0.5;
+  }
 }
 
 @media (min-width: 1120px) {

@@ -16,7 +16,6 @@
       <h3 class="service__h3">Ремонт техники различных брендов</h3>
       <footer class="service__footer">
         <div class="swiper">
-          <!-- Основной контейнер слайдов -->
           <div class="swiper-wrapper">
             <div class="swiper-slide tmp">
               <img class="brands-logo" src="image/Bitmap.png" alt="/" />
@@ -85,16 +84,12 @@
               </button>
             </div>
           </div>
-
-          
-
           <!-- Пагинация -->
           <div class="swiper-pagination"></div>
         </div>
         <div class="button--container">
-          <img src="image/expand.png" alt="/">
-        <button type="button" class="service__button">
-          Показать все</button>
+          <img src="image/expand.png" alt="/" />
+          <button type="button" class="service__button">Показать все</button>
         </div>
       </footer>
     </div>
@@ -106,7 +101,6 @@
       btn1.onclick = () => {
         if (btn1.textContent === "Показать все") {
           btn1.textContent = "Скрыть";
-
           tmp.style.height = "max-content";
         } else {
           btn1.textContent = "Показать все";
@@ -114,9 +108,7 @@
         }
       };
     </script>
-
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
     <script>
       // Создаем переменную для хранения экземпляра Swiper
       let mySwiper = null;
