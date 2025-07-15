@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <title>service</title>
+  </head>
+  <body>
+    <div class="service">
+      <h3 class="service__h3">Ремонт техники различных брендов</h3>
+      <footer class="service__footer">
+        <div class="swiper">
+          <!-- Основной контейнер слайдов -->
+          <div class="swiper-wrapper">
+            <div class="swiper-slide tmp">
+              <img class="brands-logo" src="image/Bitmap.png" alt="/" />
+              <button class="btn">
+                <img src="image/dropdown.svg" alt="/" />
+              </button>
+            </div>
+            <div class="swiper-slide">
+              <img class="brands-logo" src="image/samsung.png" alt="/" />
+              <button class="btn">
+                <img src="image/dropdown.svg" alt="/" />
+              </button>
+            </div>
+            <div class="swiper-slide">
+              <img class="brands-logo" src="image/apple.png" alt="/" />
+              <button class="btn">
+                <img src="image/dropdown.svg" alt="/" />
+              </button>
+            </div>
+            <div class="swiper-slide">
+              <img class="brands-logo" src="image/bosch.png" alt="/" />
+              <button class="btn">
+                <img src="image/dropdown.svg" alt="/" />
+              </button>
+            </div>
+            <div class="swiper-slide">
+              <img class="brands-logo" src="image/hp.png" alt="/" />
+              <button class="btn">
+                <img src="image/dropdown.svg" alt="/" />
+              </button>
+            </div>
+            <div class="swiper-slide">
+              <img class="brands-logo" src="image/sony.png" alt="/" />
+              <button class="btn">
+                <img src="image/dropdown.svg" alt="/" />
+              </button>
+            </div>
+            <div class="swiper-slide">
+              <img class="brands-logo" src="image/acer.png" alt="/" />
+              <button class="btn">
+                <img src="image/dropdown.svg" alt="/" />
+              </button>
+            </div>
+            <div class="swiper-slide">
+              <img class="brands-logo" src="image/samsung.png" alt="/" />
+              <button class="btn">
+                <img src="image/dropdown.svg" alt="/" />
+              </button>
+            </div>
+            <div class="swiper-slide">
+              <img class="brands-logo" src="image/sony.png" alt="/" />
+              <button class="btn">
+                <img src="image/dropdown.svg" alt="/" />
+              </button>
+            </div>
+            <div class="swiper-slide">
+              <img class="brands-logo" src="image/samsung.png" alt="/" />
+              <button class="btn">
+                <img src="image/dropdown.svg" alt="/" />
+              </button>
+            </div>
+            <div class="swiper-slide">
+              <img class="brands-logo" src="image/samsung.png" alt="/" />
+              <button class="btn">
+                <img src="image/dropdown.svg" alt="/" />
+              </button>
+            </div>
+          </div>
+
+          
+
+          <!-- Пагинация -->
+          <div class="swiper-pagination"></div>
+        </div>
+        <div class="button--container">
+          <img src="image/expand.png" alt="/">
+        <button type="button" class="service__button">
+          Показать все</button>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      const btn1 = document.querySelector(".service__button");
+      const tmp = document.querySelector(".swiper");
+
+      btn1.onclick = () => {
+        if (btn1.textContent === "Показать все") {
+          btn1.textContent = "Скрыть";
+
+          tmp.style.height = "max-content";
+        } else {
+          btn1.textContent = "Показать все";
+          tmp.style.height = "184px";
+        }
+      };
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+      // Создаем переменную для хранения экземпляра Swiper
+      let mySwiper = null;
+
+      // Функция инициализации/уничтожения Swiper
+      function initSwiper() {
+        const isMobile = window.innerWidth < 768;
+        const swiperEl = document.querySelector(".swiper");
+
+        if (isMobile && !mySwiper) {
+          // Инициализируем Swiper только для мобильных
+          mySwiper = new Swiper(".swiper", {
+            slidesPerView: "auto",
+            slidesPerGroup: 1,
+            spaceBetween: 16,
+            resistanceRatio: 0,
+            watchSlidesProgress: true,
+            pagination: {
+              el: ".swiper-pagination",
+              clickable: true,
+            },
+          });
+        } else if (!isMobile && mySwiper) {
+          // Уничтожаем Swiper на десктопе
+          mySwiper.destroy(true, true);
+          mySwiper = null;
+
+          // Возвращаем исходную разметку (опционально)
+          swiperEl.innerHTML = `
+            <div class="swiper-wrapper">
+              ${swiperEl.querySelector(".swiper-wrapper").innerHTML}
+            </div>
+            <div class="swiper-pagination"></div>
+          `;
+        }
+      }
+
+      // Инициализация при загрузке страницы
+      document.addEventListener("DOMContentLoaded", initSwiper);
+
+      // Реагирование на изменение размера окна
+      window.addEventListener("resize", initSwiper);
+    </script>
+  </body>
+</html>
