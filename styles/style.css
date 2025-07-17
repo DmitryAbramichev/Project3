@@ -26,16 +26,24 @@ body {
   margin: 0;
 }
 
-.service__h3 {
+.service__header {
+  border-top: 1px solid #d9fff5;
+  background: linear-gradient(90deg, #f8f8f8 0%, #fff 100%);
+  height: 56px;
+}
+
+.service__title {
+  font-family: TTLakes-Regular;
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
+  letter-spacing: -0.01em;
   text-transform: uppercase;
   color: #7e7e82;
-  margin: 16px;
+  margin-left: 24px;
 }
 
-.service__footer {
+.service__cards {
   padding-left: 16px;
   background-color: #f8f8f8;
 }
@@ -91,7 +99,7 @@ body {
 /* swiper for desktop */
 
 @media (min-width: 768px) {
-  .service__footer {
+  .service__cards {
     display: flex;
     flex-direction: column;
     row-gap: 16px;
