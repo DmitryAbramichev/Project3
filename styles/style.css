@@ -128,7 +128,6 @@ body {
   .service__button {
     all: unset;
     display: flex;
-    justify-content: space-between;
     border: none;
     width: 133px;
     height: 24px;
