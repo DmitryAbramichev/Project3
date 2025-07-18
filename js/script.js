@@ -1,4 +1,4 @@
-const btn1 = document.querySelector(".service__button");
+const btn1 = document.querySelector(".tmp3");
 const tmp = document.querySelector(".swiper");
 
 btn1.onclick = () => {
